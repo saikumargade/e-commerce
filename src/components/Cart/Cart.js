@@ -3,7 +3,7 @@ export default class Cart extends React.Component{
     render(){
         return(
             <div className='cart'>
-                cart
+                <h2>Cart</h2>
             </div>
         )
     }

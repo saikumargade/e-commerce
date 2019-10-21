@@ -16,8 +16,8 @@ function App() {
           cart */}
         <BrowserRouter>
           <Navbar />
-          <Route Link to='/' component={Home} />
-          <Route Link to='/cart' component={Cart} />
+          <Route exact path='/' component={Home} />
+          <Route path='/cart' component={Cart} />
         </BrowserRouter>
     </div>
   );

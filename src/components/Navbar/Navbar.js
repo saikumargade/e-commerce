@@ -1,14 +1,15 @@
 import React from 'react';
 import './Navbar.css'
-import Button from '@material-ui/core/Button'
+import { BrowserRouter,Route,Link } from "react-router-dom";
+import Button from '@material-ui/core/Button';
 export default class Navbar extends React.Component{
     render(){
         return(
             <header className='navbar'>
-                <Button exact path='./' variant='contained' color='primary'>Home</Button>
+                <Link to='/' style={{textDecoration:'none'}}><Button variant='contained' color='primary'>Home</Button></Link>
                 <input placeholder='Search'></input>
-                <Button variant='outlined'>Sign In</Button>
-                <Button path='./cart' variant='contained' color='primary'>Cart</Button>
+                <Link style={{textDecoration:'none'}}><Button variant='outlined'>Sign In</Button></Link>
+                <Link to='/cart' style={{textDecoration:'none'}}><Button variant='contained' color='primary'>Cart</Button></Link>
             </header>
             
         )
