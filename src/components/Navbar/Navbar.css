@@ -1,0 +1,12 @@
+.navbar{
+    display: block;
+    color: #fff;
+    height: 50px;
+}
+.navbar input{
+    height:33px;
+    outline: none;
+    border-radius: 5px;
+    border: black 1px solid;
+    padding-left: 5px;
+}
