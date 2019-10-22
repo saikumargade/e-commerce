@@ -1,9 +1,16 @@
 import React from 'react';
+import faker from 'faker';
 import './Home.css'
 import Rectangle from '../Cards/Rectangle';
 import Mobiles from '../../Images/mobile250x250.png';
 import shirts from '../../Images/shirts250x250.png';
+let cat=[];
 
+let handlecat=()=>{
+    for(let i=0;i<5;i++)
+        cat.push({Heading:faker.commerce.productName()})
+};
+handlecat();
 
 const categories=[
     {
@@ -33,6 +40,7 @@ export default class Home extends React.Component{
                         })
                     }
                 </div>
+                {cat.map((c)=>{console.log(c.Heading)})}
 
             </div>
         )
