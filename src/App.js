@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home'
+import List from './components/ProductsList/List'
 import Cart from './components/Cart/Cart'
 import { BrowserRouter,Route,Link } from "react-router-dom";
 
@@ -18,6 +19,7 @@ function App() {
           <Navbar />
           <Route exact path='/' component={Home} />
           <Route path='/cart' component={Cart} />
+          <Route path='/list' component={List} />
         </BrowserRouter>
     </div>
   );
