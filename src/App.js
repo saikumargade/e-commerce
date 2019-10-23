@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home'
 import List from './components/ProductsList/List'
 import Cart from './components/Cart/Cart'
-import { BrowserRouter,Route,Link } from "react-router-dom";
+import { BrowserRouter,Route } from "react-router-dom";
 
 function App() {
   return (

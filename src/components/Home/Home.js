@@ -26,27 +26,22 @@ handlecat();
 //     }
 // ]
 export default class Home extends React.Component{
+    componentDidMount(){
+        this.setState({cat})
+    }
     render(){
         return(
             <div className='home'>
                 <h2>Home page</h2>
                 <div className='container'>
-                    {/* {
-                        categories.map((category)=>{
-                            console.log("Image from home", category.img)
-                            let heading =category.Heading;
-                            let img=category.img;
-                            let description=category.description;
-                            return <Rectangle heading={heading} img={img} description={description} />
-                        })
-                    } */}
-                    {/* {cat.map((c)=>{console.log(c)})} */}
+                    {!(this.state) ? console.log('no state') : console.log('state has been set')}
                     {
-                        cat.map((c,i)=>{
-                            return <Rectangle heading={c.Heading} img={i%2===0?Mobiles:shirts} description={c.description} />
-                        })
+                        (this.state)?
+                        (this.state.cat.map((c,i)=>{
+                            return <Rectangle key={c.Heading} heading={c.Heading} img={i%2===0?Mobiles:shirts} description={c.description} />
+                        })):(console.log('cat array is empty before calling componentDidMount'))
+                        
                     }
-
                 </div>
                 <Wide />                
             </div>
