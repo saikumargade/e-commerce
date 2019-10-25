@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default class Rectangle extends React.Component{
     render(){
         // console.log("Image: ", this.props.img)
-        console.log("id:",this.props.unique)
+        // console.log("id:",this.props.unique)
         return(
             <div className='box'>
                 <h3>{this.props.heading}</h3>
