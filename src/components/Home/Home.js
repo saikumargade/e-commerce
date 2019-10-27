@@ -9,7 +9,7 @@ let cat=[];
 
 let handlecat=()=>{
     for(let i=0;i<8;i++)
-        cat.push({Heading:faker.commerce.productName(),img:faker.image.fashion(250,250,true),description:faker.lorem.sentence()})
+        cat.push({Heading:faker.commerce.productName(),id:i,img:faker.image.fashion(250,250,true),description:faker.lorem.sentence()})
 };
 handlecat();
 
@@ -38,7 +38,7 @@ export default class Home extends React.Component{
                     {
                         (this.state)?
                         (this.state.cat.map((c,i)=>{
-                            return <Rectangle key={c.Heading} heading={c.Heading} img={i%2===0?Mobiles:shirts} description={c.description} />
+                            return <Rectangle key={c.Heading} obj={c} img={i%2===0?Mobiles:shirts} />
                         })):(console.log('cat array is empty before calling componentDidMount'))
                         
                     }

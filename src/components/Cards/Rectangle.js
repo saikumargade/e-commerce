@@ -5,11 +5,13 @@ export default class Rectangle extends React.Component{
     render(){
         // console.log("Image: ", this.props.img)
         // console.log("id:",this.props.unique)
+        // console.log("object:",this.props.obj)
+        const { obj,img } = this.props
         return(
             <div className='box'>
-                <h3>{this.props.heading}</h3>
-                <Link to={{pathname:'/item',image:{display:this.props.img}}}><img src={this.props.img} alt='imgdescription'></img></Link>
-                <p>{this.props.description}</p>
+                <h3>{obj.Heading}</h3>
+                <Link to={{pathname:'/item',image:{display:img},object:obj}}><img src={img} alt='imgdescription'></img></Link>
+                <p>{obj.description}</p>
             </div>
         )
     }

@@ -14,6 +14,7 @@ export default class Item extends React.Component{
             (this.toStore.id)++;
     }
     render(){
+        console.log('item-obj:',this.props.location.object);
         return(
             <div className='item'>
                 <img src={(!(sessionStorage.getItem('img')))?this.props.location.image.display:sessionStorage.getItem('img')}></img>
