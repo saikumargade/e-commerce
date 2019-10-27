@@ -7,6 +7,7 @@ export default class Rectangle extends React.Component{
         // console.log("id:",this.props.unique)
         // console.log("object:",this.props.obj)
         const { obj,img } = this.props
+        // console.log("Image: ", obj.img)
         return(
             <div className='box'>
                 <h3>{obj.Heading}</h3>

@@ -4,5 +4,10 @@
     height: 300px;
     margin-left: 19px;
     margin-bottom: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     /* background: white; */
 }
+
+

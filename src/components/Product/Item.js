@@ -8,10 +8,7 @@ export default class Item extends React.Component{
     }
     handleAddToCart=()=>{
             let item=sessionStorage.getItem('img');
-            this.toStore={id:1,toshow:item}
-            localStorage.setItem('cartitem',this.toStore);
-            console.log(this.toStore);
-            (this.toStore.id)++;
+            localStorage.setItem('cartitem',item);
     }
     render(){
         console.log('item-obj:',this.props.location.object);
